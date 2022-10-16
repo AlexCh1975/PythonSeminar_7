@@ -1,0 +1,31 @@
+# mult = input('"*": ')
+    # operator.append(mult)
+    # div = input('"/": ') 
+    # operator.append(div) 
+    # int_div = input('"//": ')
+    # operator.append(int_div)
+    # rem_of_div = input('"%": ') 
+    # operator.append(rem_of_div) 
+    # pow = input('"pow": ')
+    # operator.append(pow)
+    # sqrt = input('"SQRT": ') 
+    # operator.append(sqrt) 
+    # sum = input('"+": ')
+    # operator.append(sum) 
+    # sub = input('"-": ')
+    # operator.append(sub)
+
+
+    # data = []
+    # if rational_num and not complex_num:
+    #     for i in range(2):
+    #         data.append(int(input("Введите число: ")))
+    # elif not rational_num and complex_num:
+    #     for i in range(4):
+    #         data.append(int(input("Введите число: ")))
+    # elif rational_num and complex_num:
+    #     for i in range(3):
+    #         data.append(int(input("Введите число: ")))
+    # else:
+    #     print("Не выбрано не одного числа!")
+    #     exit()

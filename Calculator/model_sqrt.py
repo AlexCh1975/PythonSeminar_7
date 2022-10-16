@@ -5,4 +5,4 @@ def init(a):
     x = a
 
 def sqrt():
-    return x * 0.5
+    return x ** 0.5

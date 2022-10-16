@@ -29,15 +29,25 @@ def ui_interaction():
      
     operator = {}
     keys = ['mult', 'div', 'int_div', 'rem_of_div', 'pow', 'sqrt', 'sum', 'sub']
-    for key in keys: 
-        print(f'"{key}"')
+    keys_sing = [' * ', ' / ', ' // ', ' % ', ' ^ ', ' sqrt ', ' + ', ' - ']
+    k = 0
+    data = list(filter(lambda x: x != "", data))
+    if len(data) == 1:
+        print(f"{'sqrt'}")
         meaning = input()
         if meaning:
-            operator[key] = meaning
-            if operator: break  
-     
-    for i in operator:
-        if operator[i]: data.insert(0, key) 
+            operator['sqrt'] = meaning
+    else:
+        for key in keys: 
+            print(f"{keys_sing[k]}")
+            meaning = input()
+            k += 1
+            if meaning:
+                operator[key] = meaning
+                if operator: break  
+        
+    for key in operator:
+        if operator[key]: data.insert(0, key) 
         else:
             print("Вы не выбрали операцию!")
             exit()
@@ -45,5 +55,15 @@ def ui_interaction():
     return data
     print()
 
-def print_result(res):
-    print(f'result = {res}')
+def print_result(res, data):
+    keys = {'mult': '*', 'div': '/', 'int_div': '//', 'rem_of_div': '%', 'pow': '^', \
+        'sqrt': 'sqrt', 'sum': '+', 'sub': '-'}
+    op = ''
+    if len(data) == 4:
+        for key in keys:
+            if data[0] == key: op = keys[key]
+        print(f'{data[1]} {op} {data[2]} = {res}')
+    else:
+        for key in keys:
+            if data[0] == key: op = keys[key]
+        print(f'{data[1]} {op} = {res}')

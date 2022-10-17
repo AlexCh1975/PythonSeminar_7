@@ -56,10 +56,11 @@ def ui_interaction():
     print()
 
 def print_result(res, data):
+    print(data)
     keys = {'mult': '*', 'div': '/', 'int_div': '//', 'rem_of_div': '%', 'pow': '^', \
         'sqrt': 'sqrt', 'sum': '+', 'sub': '-'}
     op = ''
-    if len(data) == 4:
+    if len(data) == 3:
         for key in keys:
             if data[0] == key: op = keys[key]
         print(f'{data[1]} {op} {data[2]} = {res}')

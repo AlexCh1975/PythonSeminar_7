@@ -20,7 +20,6 @@ def all_logger(result, data):
         elif operation == 'int_div': operation = '//' 
         elif operation == 'rem_of_div': operation = '%' 
         elif operation == 'pow': operation = '^' 
-        # elif operation == 'sgrt': operation = 'sgrt' 
         elif operation == 'sum': operation = '+' 
         elif operation == 'sub': operation = '-' 
         else: 

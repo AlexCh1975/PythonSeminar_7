@@ -56,7 +56,7 @@ def ui_interaction():
     print()
 
 def print_result(res, data):
-    print(data)
+    # print(data)
     keys = {'mult': '*', 'div': '/', 'int_div': '//', 'rem_of_div': '%', 'pow': '^', \
         'sqrt': 'sqrt', 'sum': '+', 'sub': '-'}
     op = ''

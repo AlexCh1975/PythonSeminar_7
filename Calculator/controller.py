@@ -9,27 +9,26 @@ import compl
 
 def button_click():
     data = ui.ui_interaction()
-    # data = list(filter(lambda x: x != "", data))
-    
     value = 0
     n_data = [data[0]]
     for i in range(1, len(data)):
-        if not data[i].isalnum():
+        if '+' in data[i] or '-' in data[i] and 'j' in data[i]:
             compl.init(data[i])
-            value = compl.get_comples_nums()
-        elif data[i].isdigit():
+            value = compl.get_comples_nums() 
+        elif data[i].isdigit() or '.' in data[i]:
             value = float(data[i])
+        else:
+            print("Некоректный ввод числа!")
 
         n_data.append(value)
     
     # operation = __import__('model_' + n_data[0])
     # f = globals()[data[0]]
     # f = getattr(operation, data[0])
-    # f = eval(data[0])
     # print(f)
     # mult = data[0]
     # operation.init(n_data[1], n_data[2])
-    # result = operation.div()
+    # result = operation.f()
     # log.all_logger(result, n_data)
     # ui.print_result(result)
 
